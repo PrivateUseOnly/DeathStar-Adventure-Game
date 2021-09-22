@@ -1,17 +1,17 @@
-print(f'''
+print('''
 ***************************************************************************
            .          .
  .          .                  .          .              .
-       +.           _____  .        .        + .                    .
-   .        .   ,-~"     "~-.                                +
-              ,^ ___         ^. +                  .    .       .
-             / .^   ^.         \         .      _ .
-            Y  l  o  !          Y  .         __CL\H--.
-    .       l_ `.___.'        _,[           L__/_\H' \\--_-          +
-            |^~"-----------""~ ^|       +    __L_(=): ]-_ _-- -
-  +       . !                   !     .     T__\ /H. //---- -       .
-         .   \                 /               ~^-H--'
-              ^.             .^            .      "       +.
+       +.           ______  .        .        + .                    .
+   .        .   ,-~"       "~-.                                +
+              ,^ ___           ^. +                  .    .       .
+             / .^   ^.           \         .      _ .
+            Y  l  o  !            Y  .         __CL\H--.
+    .       l_ `.___.'        _,  [           L__/_\H' \\--_-          +
+            |^~"-----------""~ ^  |       +    __L_(=): ]-_ _-- -
+  +       . !                     !     .     T__\ /H. //---- -       .
+         .   \                   /               ~^-H--'
+              ^.               .^            .      "       +.
                 "-.._____.,-" .                    .
          +           .                .   +                       .
   +          .             +                                  .
@@ -36,56 +36,55 @@ print(f"\n\nWelcome {name}\nYour goal is:\n"
 
 wait = input("ARE YOU READY? When ready press enter\n")
 
-
 action = input("The pilot: Where do you will to be dropped?\n"
                "type: E - to pick east side. N - north side or S - south side.\n"
                "After choosing press enter:\n")
 action.upper()
 if action == "S":
-    action = input(f"You are near the Maintenance door, what you want to do?\n"
+    action = input(f"\nYou are near the Maintenance door, what you want to do?\n"
                    f"B for Breach in, H for Hide and wait, O for Open the door\n")
     action.upper()
     if action == "H":
-        print("The worker came the doors are left open")
-        action = input("What you want to do? \n "
+        print("\nThe worker came the doors are left open")
+        action = input("What you want to do? \n"
                        "E - Engage with the worker,\n"
                        "D - Distract him with a stone\n"
                        "S - Sneak in\n")
 
         action.upper()
         if action == "S":
-            print("You're in! You've looked around and you choose your path")
+            print("\nYou're in! You've looked around and you choose your path")
             action = input("C - open the ceiling and go along green pipes\n"
                            "F - open the floor and go along with black cables\n"
-                           "R - you see a reactor sign pointing left, go this direction")
+                           "R - you see a reactor sign pointing left, go this direction\n")
 
             action.upper()
             if action == "C":
-                print("You've been sneaking for about 5 min now, but you are in the crossing\n"
+                print("\nYou've been sneaking for about 5 min now, but you are in the crossing\n"
                       "Choose the way you want to go")
                 action = input("B - Go where the pipes are getting bigger\n"
                                "F - Go back to the Floor\n"
-                               "S - Go where the pipes are getting smaller")
+                               "S - Go where the pipes are getting smaller\n")
                 action.upper()
                 if action == "B":
-                    print("You are in the Reactor chamber. You plant the bomb,\n"
+                    print("\nYou are in the Reactor chamber. You plant the bomb,\n"
                           " but you need to set the time for the explosion")
                     action = input("10 - for 10 minutes\n"
                                    "2 - for 2 hours\n"
-                                   "20 - for 20 seconds")
+                                   "20 - for 20 seconds\n")
                     action.upper()
                     if action == "10":
-                        print("Now you need to evacuate quickly...\n"
+                        print("\nNow you need to evacuate quickly...\n"
                               "whats the plan?")
                         action = input("C -Call command to pick you up while you sneaking out to randezvous point\n"
-                                       "R - run to ranezvous pont and call command for pick up\n"
-                                       "S - Call command to pick you up and sneak to randezvous point")
+                                       "R - run to randezvous point and call command for pick up\n"
+                                       "S - Call command to pick you up and sneak to randezvous point\n")
                         action.upper()
                         if action == "C":
-                            print(f"MISSION ACCOMPLISHED!\n"
+                            print(f"\nMISSION ACCOMPLISHED!\n"
                                   f"CONGRATS {name}!")
                         elif action == "R":
-                            print("You were caught. The explosion killed you and the pilot\n"
+                            print("\nYou were caught. The explosion killed you and the pilot\n"
                                   "who was supposed to pick you up\n"
                                   "Mission Incomplete")
                         else:
@@ -94,56 +93,56 @@ if action == "S":
                                   "who was supposed to pick you up\n"
                                   "Mission Incomplete")
                     elif action == "2":
-                        print("Bomb found and defused by troops, after you left the Deathstar.\n"
+                        print("\nBomb found and defused by troops, after you left the Deathstar.\n"
                               "Mission incomplete")
                     else:
-                        print("Got killed by the bomb")
+                        print("\nGot killed by the bomb")
                 elif action == "F":
-                    print("You were discover in the kitchen and now your status is K.I.A.\n"
+                    print("\nYou were discover in the kitchen and now your status is K.I.A.\n"
                           "Mission Incomplete")
                 else:
-                    print("You were heard. A trooper raised alarm. Couple meters later, you got caught\n"
+                    print("\nYou were heard. A trooper raised alarm. Couple meters later, you got caught\n"
                           "and taken to prison\n"
                           "Mission Incomplete")
             elif action == "F":
-                print("It got you to the command center, from where you were taken to prison!\n"
+                print("\nIt got you to the command center, from where you were taken to prison!\n"
                       "Mission Incomplete")
             else:
-                print("You've got to be kidding! First trooper saw you, seconds later you were death\n"
+                print("\nYou've got to be kidding! First trooper saw you, seconds later you were death\n"
                       "Mission Incomplete")
         elif action == "D":
-            print("There are no stones on Deathstar, Moron.\n"
+            print("\nThere are no stones on Deathstar, Moron.\n"
                   "You've used your air tank instead and \n"
                   "you died before the troops came for you.\n"
                   "MISSION INCOMPLETE")
         else:
-            print("You're brave! Pick what to do with this person")
+            print("\nYou're brave! Pick what to do with this person")
             action = input("I - Scary her and Interrogate\n"
                            "K - kill and search the body\n"
                            "S - Shush and make her cooperate")
             action.upper()
             if action == "S":
-                print("Her coworker, came unseen and hit you in the head with metal pipe\n"
+                print("\nHer coworker, came unseen and hit you in the head with metal pipe\n"
                       "MISSION INCOMPLETE")
             elif action == "I":
-                print("You've got killed, by her 20\" wrench")
+                print("\nYou've got killed, by her 20\" wrench")
             else:
-                print("Alarm activated, because of her wristband sensing no pulse\n"
+                print("\nAlarm activated, because of her wristband sensing no pulse\n"
                       "You were caught and thrown to prison")
     elif action == "B":
-        print("Alarm activated, you were take to prison")
+        print("\nAlarm activated, you were take to prison")
     else:
-        print("Warning in security system detected. Troops came and took you to prison")
+        print("\nWarning in security system detected. Troops came and took you to prison")
 
 elif action == "E":
-    print("WARNING! You've been targeted with Deathstars LDS!")
-    action = input("Choose direction to dodge the laser! L for Left, D for Down, R for Right")
+    print("\nWARNING! You've been targeted with Deathstars LDS!")
+    action = input("\nChoose direction to dodge the laser, QUICKLY!!\n L for Left, D for Down, R for Right")
     if action == "R":
-        print(f"You've dodge the laser, but the command orders you to return to base \n"
+        print(f"\nYou've dodge the laser, but the command orders you to return to base \n"
               f"Mission Incomplete")
     else:
-        print("Killed by LDS \n"
+        print("\nKilled by LDS \n"
               "Mission Incomplete")
 else:
-    print("After half an hour of searching, no doors were found, returning to base\n"
+    print("\nAfter half an hour of searching, no doors were found, returning to base\n"
           "Mission Incomplete")
