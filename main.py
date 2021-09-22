@@ -19,9 +19,11 @@ print('''
                                                         .
 ***************************************************************************
 ''')
-input("INSTRUCTION! \n Just type a letter of choice, and press ENTER to start the game!")
+input("INSTRUCTION! \n Just type a letter of choice, and press ENTER.\n To start the game, press Enter!\n")
 print("Welcome to the Rogue Wars")
 print("Your mission is to destroy the Deathstar!")
+mission_incomplete = "MISSION INCOMPLETE"
+
 name = input("Type your name soldier: ")
 print(f"\n\nWelcome {name}\nYour goal is:\n"
       f"- find a way inside and infiltrate the most important target \n"
@@ -53,7 +55,7 @@ if action == "S":
 
         action = action.upper()
         if action == "S":
-            print("\nYou're in! You've looked around and you choose your path")
+            print("\nYou're in! You've looked around and you choose your path\n")
             action = input("C - open the ceiling and go along green pipes\n"
                            "F - open the floor and go along with black cables\n"
                            "R - you see a reactor sign pointing left, go this direction\n")
@@ -68,7 +70,7 @@ if action == "S":
                 action = action.upper()
                 if action == "B":
                     print("\nYou are in the Reactor chamber. You plant the bomb,\n"
-                          " but you need to set the time for the explosion")
+                          "but you need to set the time for the explosion\n")
                     action = input("10 - for 10 minutes\n"
                                    "2 - for 2 hours\n"
                                    "20 - for 20 seconds\n")
@@ -77,72 +79,95 @@ if action == "S":
                         print("\nNow you need to evacuate quickly...\n"
                               "whats the plan?")
                         action = input("C -Call command to pick you up while you sneaking out to randezvous point\n"
-                                       "R - run to randezvous point and call command for pick up\n"
+                                       "R - Run to randezvous point and call command for pick up\n"
                                        "S - Call command to pick you up and sneak to randezvous point\n")
                         action = action.upper()
                         if action == "C":
                             print(f"\nMISSION ACCOMPLISHED!\n"
                                   f"CONGRATS {name}!")
+                            input("\nPress Enter to close the game\n")
                         elif action == "R":
-                            print("\nYou were caught. The explosion killed you and the pilot\n"
-                                  "who was supposed to pick you up\n"
-                                  "Mission Incomplete")
+                            print(f"\nYou were caught. The explosion killed you and the pilot\n"
+                                  f"who was supposed to pick you up\n"
+                                  f"{mission_incomplete}")
+                            input("\nPress Enter to close the game\n")
                         else:
-                            print("You were too slow at randezvous point.\n"
-                                  "The explosion killed you and the pilot\n"
-                                  "who was supposed to pick you up\n"
-                                  "Mission Incomplete")
+                            print(f"You were too slow at randezvous point.\n"
+                                  f"The explosion killed you and the pilot\n"
+                                  f"who was supposed to pick you up\n"
+                                  f"{mission_incomplete}")
+                            input("\nPress Enter to close the game\n")
                     elif action == "2":
-                        print("\nBomb found and defused by troops, after you left the Deathstar.\n"
-                              "Mission incomplete")
+                        print(f"\nBomb found and defused by troops, after you left the Deathstar.\n"
+                              f"{mission_incomplete}")
+                        input("\nPress Enter to close the game\n")
                     else:
-                        print("\nGot killed by the bomb")
+                        print(f"\nGot killed by the bomb\n"
+                              f"{mission_incomplete}")
+                        input("\nPress Enter to close the game\n")
                 elif action == "F":
-                    print("\nYou were discover in the kitchen and now your status is K.I.A.\n"
-                          "Mission Incomplete")
+                    print(f"\nYou were discover in the kitchen and now your status is K.I.A.\n"
+                          f"{mission_incomplete}")
+                    input("\nPress Enter to close the game\n")
                 else:
-                    print("\nYou were heard. A trooper raised alarm. Couple meters later, you got caught\n"
-                          "and taken to prison\n"
-                          "Mission Incomplete")
+                    print(f"\nYou were heard. A trooper raised alarm. Couple meters later, you got caught\n"
+                          f"and taken to prison\n"
+                          f"{mission_incomplete}")
+                    input("\nPress Enter to close the game\n")
             elif action == "F":
-                print("\nIt got you to the command center, from where you were taken to prison!\n"
-                      "Mission Incomplete")
+                print(f"\nIt got you to the command center, from where you were taken to prison!\n"
+                      f"{mission_incomplete}")
+                input("\nPress Enter to close the game\n")
             else:
-                print("\nYou've got to be kidding! First trooper saw you, seconds later you were death\n"
-                      "Mission Incomplete")
+                print(f"\nYou've got to be kidding! First trooper saw you, seconds later you were death\n"
+                      f"{mission_incomplete}")
+                input("\nPress Enter to close the game\n")
         elif action == "D":
-            print("\nThere are no stones on Deathstar, Moron.\n"
-                  "You've used your air tank instead and \n"
-                  "you died before the troops came for you.\n"
-                  "MISSION INCOMPLETE")
+            print(f"\nThere are no stones on Deathstar, Moron.\n"
+                  f"You've used your air tank instead and \n"
+                  f"you died before the troops came for you.\n"
+                  f"{mission_incomplete}")
+            input("\nPress Enter to close the game\n")
         else:
-            print("\nYou're brave! Pick what to do with this person")
+            print("\nYou're brave! Pick what to do with this person\n")
             action = input("I - Scary her and Interrogate\n"
                            "K - kill and search the body\n"
                            "S - Shush and make her cooperate")
-            action.upper()
+            action = action.upper()
             if action == "S":
-                print("\nHer coworker, came unseen and hit you in the head with metal pipe\n"
-                      "MISSION INCOMPLETE")
+                print(f"\nHer coworker, came unseen and hit you in the head with metal pipe\n"
+                      f"{mission_incomplete}")
+                input("\nPress Enter to close the game\n")
             elif action == "I":
-                print("\nYou've got killed, by her 20\" wrench")
+                print(f"\nYou've got killed, by her 20\" wrench \n"
+                      f"{mission_incomplete}")
+                input("\nPress Enter to close the game\n")
             else:
-                print("\nAlarm activated, because of her wristband sensing no pulse\n"
-                      "You were caught and thrown to prison")
+                print(f"\nAlarm activated, because of her wristband sensing no pulse\n"
+                      f"You were caught and thrown to prison\n"
+                      f"{mission_incomplete}")
+                input("\nPress Enter to close the game\n")
     elif action == "B":
-        print("\nAlarm activated, you were take to prison")
+        print(f"\nAlarm activated, you were take to prison\n"
+              f"{mission_incomplete}")
+        input("\nPress Enter to close the game\n")
     else:
-        print("\nWarning in security system detected. Troops came and took you to prison")
-
+        print(f"\nWarning in security system detected. Troops came and took you to prison\n"
+              f"{mission_incomplete}")
+        input("\nPress Enter to close the game\n")
 elif action == "E":
     print("\nWARNING! You've been targeted with Deathstars LDS!")
-    action = input("\nChoose direction to dodge the laser, QUICKLY!!\n L for Left, D for Down, R for Right")
+    action = input("\nChoose direction to dodge the laser, QUICKLY!!\n L for Left, D for Down, R for Right\n")
+    action = action.upper()
     if action == "R":
         print(f"\nYou've dodge the laser, but the command orders you to return to base \n"
-              f"Mission Incomplete")
+              f"{mission_incomplete}")
+        input("\nPress Enter to close the game\n")
     else:
-        print("\nKilled by LDS \n"
-              "Mission Incomplete")
+        print(f"\nKilled by LDS \n"
+              f"{mission_incomplete}")
+        input("\nPress Enter to close the game\n")
 else:
-    print("\nAfter half an hour of searching, no doors were found, returning to base\n"
-          "Mission Incomplete")
+    print(f"\nAfter half an hour of searching, no doors were found, returning to base\n"
+          f"{mission_incomplete}")
+    input("Press enter to close the game")
